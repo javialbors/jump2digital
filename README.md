@@ -53,14 +53,14 @@ Esta API soporta los siguientes _endpoints_:
   * `username`
   * `password`
   
-  Retorna el nombre de usuario y su API Key
+  Retorna el nombre de usuario y su API Key, además del número de créditos del usuario
 
 - **POST** `/login`: Valida los credenciales de un usuario ya registrado anteriormente
   Parámetros:
   * `username`
   * `password`
   
-  Retorna el nombre de usuario y su API Key
+  Retorna el nombre de usuario y su API Key, además del número de créditos del usuario
 
 - **GET** `/skins/available`: Retorna una lista de las _skins_ disponibles en la base de datos junto con los tipos a los que pertenece y el color por defecto de cada _skin_
 
@@ -119,3 +119,5 @@ Al iniciar la aplicación, se iniciará la API en Spring Boot por defecto en el 
 
 ## Web de testing
 Para poder probar la API de una manera más directa e interactiva, también se incluye en este proyecto el fichero `index.html` junto con la carpeta `assets`. Este fichero HTML se puede abrir de manera local en el navegador. En la página web que aparezca, se pueden enviar peticiones a cualquier _endpoint_ de la API y ver el resultado de cada petición.
+
+![web preview](https://i.imgur.com/Z60r1rD.png)
