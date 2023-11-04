@@ -1,7 +1,7 @@
 {
   "skins": [
     {
-      "name": "Jack The Ripper",
+      "name": "John The Ripper",
       "types": ["Pirate"],
       "color": "#000000",
       "price": 10.99
