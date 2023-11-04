@@ -90,7 +90,7 @@ public class Main {
 
             if (!rs.next()) {
                 Database.update("INSERT INTO Skin(name, price, default_color) VALUES(?, ?, (SELECT id FROM Color WHERE hex = ?))", new Object[]{name, price, color});
-                System.out.println("Added Skin '" + name + "' to Database");
+                System.out.println("Added skin '" + name + "' to Database");
             }
 
             JSONArray types = obj.getJSONArray("types");
