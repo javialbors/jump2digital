@@ -49,7 +49,7 @@ public class User {
         return apiKey;
     }
 
-    @JsonView(UserInfoView.class)
+    @JsonView({UserCredentialsView.class, UserInfoView.class})
     public Float getFunds() {
         return funds;
     }
