@@ -1,4 +1,4 @@
-package app.controllers;
+package app;
 
 import app.model.Skin;
 import app.model.Type;
@@ -14,7 +14,7 @@ import java.sql.SQLException;
 import java.util.HashMap;
 
 @SpringBootApplication
-public class MainController {
+public class Main {
 
     public static void main(String[] args) {
         JSONObject json = JSONReader.readFromFile("skins.json");
@@ -65,7 +65,7 @@ public class MainController {
             return;
         }
 
-        SpringApplication.run(MainController.class, args);
+        SpringApplication.run(Main.class, args);
     }
 
     private static void loadSkins(JSONArray skins) throws SQLException {

@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.sql.SQLException;
 import java.util.Collection;
 
+@CrossOrigin
 @RestController
 @RequestMapping(path = "j2d/api")
 public class SkinController {
@@ -30,12 +31,16 @@ public class SkinController {
     }
 
     @GetMapping("/skin/getskin/{id}")
-    public ResponseEntity<? extends Object> getSkin(@PathVariable Integer id) {
-        if (id == null) {
+    public ResponseEntity<? extends Object> getSkin(@PathVariable String id) {
+        Integer skinID;
+        try { skinID = Integer.parseInt(id); }
+        catch (Exception e) { skinID = null; }
+
+        if (skinID == null) {
             return ResponseEntity.badRequest().body(new Response().error("Bad request"));
         } else {
             try {
-                Skin skin = SkinService.getSkin(id);
+                Skin skin = SkinService.getSkin(skinID);
 
                 return ResponseEntity.ok(skin);
             } catch (SQLException | DBErrorException e) {

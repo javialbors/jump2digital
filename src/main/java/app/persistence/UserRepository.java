@@ -78,7 +78,7 @@ public class UserRepository {
     public static Skin getUserSkinByID(int userID, int skinID) throws SQLException, DBErrorException, DataErrorException {
         ResultSet rs = Database.query("SELECT s.*, c.hex FROM Skin AS s INNER JOIN UserSkinColor AS usc ON s.id = usc.skin INNER JOIN User AS u ON usc.user = u.id INNER JOIN Color AS c ON usc.color = c.id WHERE u.id = ? AND s.id = ? LIMIT 1", new Object[]{userID, skinID});
         if (rs == null) throw new DBErrorException();
-        if (!rs.next()) throw new DataErrorException(404, "Skin not found");
+        if (!rs.next()) throw new DataErrorException(404, "Skin not found in your inventory");
 
         Skin skin = new Skin(rs.getInt("id"), rs.getString("name"), rs.getString("hex"));
         skin.setTypes(SkinRepository.getTypesOfSkin(skinID));
