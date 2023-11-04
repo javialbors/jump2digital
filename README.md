@@ -6,7 +6,8 @@ Con el fin de que esta aplicación fuese lo más escalable posible a nivel de us
 
 - `Skin`: Esta tabla define la información de cada _skin_ y contiene los siguientes atributos:
   * `id`: Identificador único de la _skin_
-  * `name`: Nombre de la _skin_ * `price`: Precio de la _skin_
+  * `name`: Nombre de la _skin_
+  * `price`: Precio de la _skin_
   * `default_color`: Identificador que hace referencia al color por defecto de la _skin_
 
 - `Color`: Esta tabla define la información de los diferentes colores que puedan ser almacenados en la base de datos. Sus atributos son:
