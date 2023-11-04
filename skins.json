@@ -1,0 +1,34 @@
+{
+  "skins": [
+    {
+      "name": "Jack The Ripper",
+      "types": ["Pirate"],
+      "color": "#000000",
+      "price": 10.99
+    },
+    {
+      "name": "Camper Cid",
+      "types": ["Soldier"],
+      "color": "#E6BC7E",
+      "price": 7.00
+    },
+    {
+      "name": "Evil Pop",
+      "types": ["Wizard"],
+      "color": "#3E5C73",
+      "price": 5.99
+    },
+    {
+      "name": "J2D2",
+      "types": ["Robot"],
+      "color": "#73B4E6",
+      "price": 19.99
+    },
+    {
+      "name": "AI Wizard",
+      "types": ["Wizard", "Robot"],
+      "color": "#CC4E4E",
+      "price": 24.99
+    }
+  ]
+}
