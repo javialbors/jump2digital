@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <title>JUMP2DIGITAL</title>
+
+    <link rel="stylesheet" href="assets/styles.css">
+    <script src="assets/index.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <div class="content-container">
+
+      <section class="endpoint-container">
+        <form class="endpoint" onsubmit="return submitRegister(this);">
+          <div class="endpoint-info">
+            <h2>/register</h2>
+            <input class="method post" type="submit" name="submit" value="POST">
+          </div>
+
+          <div class="endpoint-parameters">
+            <div class="endpoint-parameter">
+              <label for="username">Username:</label>
+              <input type="text" name="username" required>
+            </div>
+            <div class="endpoint-parameter">
+              <label for="password">Password:</label>
+              <input type="password" name="password" required>
+            </div>
+          </div>
+        </form>
+
+        <div class="endpoint-response">
+          <textarea name="response" readonly></textarea>
+        </div>
+      </section>
+
+      <section class="endpoint-container">
+        <form class="endpoint" onsubmit="return submitLogin(this);">
+          <div class="endpoint-info">
+            <h2>/login</h2>
+            <input class="method post" type="submit" name="submit" value="POST">
+          </div>
+
+          <div class="endpoint-parameters">
+            <div class="endpoint-parameter">
+              <label for="username">Username:</label>
+              <input type="text" name="username" required>
+            </div>
+            <div class="endpoint-parameter">
+              <label for="password">Password:</label>
+              <input type="password" name="password" required>
+            </div>
+          </div>
+        </form>
+
+        <div class="endpoint-response">
+          <textarea name="response" readonly></textarea>
+        </div>
+      </section>
+
+      <section class="endpoint-container">
+        <form class="endpoint" onsubmit="return skinsAvailable(this);">
+          <div class="endpoint-info">
+            <h2>/skins/available</h2>
+            <input class="method get" type="submit" name="submit" value="GET">
+          </div>
+        </form>
+
+        <div class="endpoint-response">
+          <textarea name="response" readonly></textarea>
+        </div>
+      </section>
+
+      <section class="endpoint-container">
+        <form class="endpoint" onsubmit="return getSkinByID(this);">
+          <div class="endpoint-info">
+            <h2>/skins/getskin/<input class="path-parameter" type="number" name="skin" value="0" required></h2>
+            <input class="method get" type="submit" name="submit" value="GET">
+          </div>
+        </form>
+
+        <div class="endpoint-response">
+          <textarea name="response" readonly></textarea>
+        </div>
+      </section>
+
+      <section class="endpoint-container">
+        <form class="endpoint" onsubmit="return buySkin(this);">
+          <div class="endpoint-info">
+            <h2>/skins/buy</h2>
+            <input class="method post" type="submit" name="submit" value="POST">
+          </div>
+
+          <div class="endpoint-parameters">
+            <div class="endpoint-parameter">
+              <label for="skin">Skin ID:</label>
+              <input type="number" name="skin" required>
+            </div>
+            <div class="endpoint-parameter">
+              <label for="apiKey">API Key:</label>
+              <input type="text" name="apiKey" required>
+            </div>
+          </div>
+        </form>
+
+        <div class="endpoint-response">
+          <textarea name="response" readonly></textarea>
+        </div>
+      </section>
+
+      <section class="endpoint-container">
+        <form class="endpoint" onsubmit="return userSkins(this);">
+          <div class="endpoint-info">
+            <h2>/skins/myskins</h2>
+            <input class="method get" type="submit" name="submit" value="GET">
+          </div>
+
+          <div class="endpoint-parameters">
+            <div class="endpoint-parameter">
+              <label for="apiKey">API Key:</label>
+              <input type="text" name="apiKey" required>
+            </div>
+          </div>
+        </form>
+
+        <div class="endpoint-response">
+          <textarea name="response" readonly></textarea>
+        </div>
+      </section>
+
+      <section class="endpoint-container">
+        <form class="endpoint" onsubmit="return changeSkinColor(this);">
+          <div class="endpoint-info">
+            <h2>/skins/color</h2>
+            <input class="method put" type="submit" name="submit" value="PUT">
+          </div>
+
+          <div class="endpoint-parameters">
+            <div class="endpoint-parameter">
+              <label for="skin">Skin ID:</label>
+              <input type="number" name="skin" required>
+            </div>
+            <div class="endpoint-parameter">
+              <label for="hex">Color:</label>
+              <input type="color" name="hex" required>
+            </div>
+            <div class="endpoint-parameter">
+              <label for="apiKey">API Key:</label>
+              <input type="text" name="apiKey" required>
+            </div>
+          </div>
+        </form>
+
+        <div class="endpoint-response">
+          <textarea name="response" readonly></textarea>
+        </div>
+      </section>
+
+      <section class="endpoint-container">
+        <form class="endpoint" onsubmit="return deleteUserSkin(this);">
+          <div class="endpoint-info">
+            <h2>/skins/delete/<input class="path-parameter" type="number" name="skin" value="0" required></h2>
+            <input class="method delete" type="submit" name="submit" value="DELETE">
+          </div>
+
+          <div class="endpoint-parameters">
+            <div class="endpoint-parameter">
+              <label for="apiKey">API Key:</label>
+              <input type="text" name="apiKey" required>
+            </div>
+          </div>
+        </form>
+
+        <div class="endpoint-response">
+          <textarea name="response" readonly></textarea>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,129 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+  font-family: Monaco, Arial, sans-serif;
+}
+
+button {
+  border: 1px solid #8f8f8f;
+  border-radius: 0;
+  background: none;
+  font-size: 16px;
+  padding: 5px 15px;
+}
+
+button:hover {
+  cursor: pointer;
+  background: #e9e9e9;
+}
+
+.content-container {
+  padding: 20px 75px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  background: rgb(215,233,238);
+  background: linear-gradient(90deg, rgba(215,233,238,1) 0%, rgba(216,242,221,1) 40%, rgba(210,211,244,1) 100%);
+}
+
+.endpoint-container {
+  padding-left: 20px;
+  padding-bottom: 20px;
+  padding-right: 20px;
+  border: 1px solid lightgray;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 0 1px lightgray;
+}
+
+.endpoint-info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+
+.endpoint-info > h2 > input {
+  border: none;
+  font-size: 1em;
+  font-family: Monaco, Arial, sans-serif;
+  width: 2em;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+   opacity: 1;
+}
+
+.method {
+  font-family: Monaco, Arial, sans-serif;
+  font-size: 16px;
+  border: none;
+  padding: 5px 10px;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 0 1px lightgray;
+  transition: 75ms ease-in-out;
+}
+
+.method:hover {
+  cursor: pointer;
+  filter: brightness(93%);
+}
+
+.method:active {
+  scale: 0.9;
+}
+
+.post {
+  background: #3cadc7;
+}
+
+.get {
+  background: #38c96b;
+}
+
+.put {
+  background: #ebbd3f;
+}
+
+.delete {
+  background: #eb4b3f;
+}
+
+.endpoint-parameters {
+  display: flex;
+  gap: 50px;
+}
+
+.endpoint-parameter {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.endpoint-parameter > label {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.endpoint-parameter > input {
+  max-width: 300px;
+}
+
+.endpoint-response {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.endpoint-response > textarea {
+  width: 100%;
+  resize: none;
+  border: none;
+  background: #eeeeee;
+  border-top: 2px solid lightgray;
+  display: none;
+
+  font-size: 20px;
+}

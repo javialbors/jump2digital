@@ -1,0 +1,50 @@
+DROP DATABASE IF EXISTS j2d_videogame;
+CREATE DATABASE j2d_videogame;
+
+USE j2d_videogame;
+
+DROP TABLE IF EXISTS Type CASCADE;
+CREATE TABLE Type (
+	id INT AUTO_INCREMENT,
+    name VARCHAR(255),
+    PRIMARY KEY (id)
+);
+
+DROP TABLE IF EXISTS Color CASCADE;
+CREATE TABLE Color (
+	id INT AUTO_INCREMENT,
+    hex VARCHAR(7),
+    PRIMARY KEY (id)
+);
+
+DROP TABLE IF EXISTS Skin CASCADE;
+CREATE TABLE Skin (
+	id INT AUTO_INCREMENT,
+	name VARCHAR(255) NOT NULL,
+    price DECIMAL(7, 2) NOT NULL,
+    default_color INT REFERENCES Color(id),
+    PRIMARY KEY (id)
+);
+
+DROP TABLE IF EXISTS User CASCADE;
+CREATE TABLE User (
+	id INT AUTO_INCREMENT,
+    username VARCHAR(16),
+    password VARCHAR(255),
+    api_key VARCHAR(32),
+    funds DECIMAL(7, 2) DEFAULT 100,
+    PRIMARY KEY (id)
+);
+
+DROP TABLE IF EXISTS SkinType CASCADE;
+CREATE TABLE SkinType (
+	skin INT REFERENCES Skin(id),
+    type INT REFERENCES Type(id)
+);
+
+DROP TABLE IF EXISTS UserSkinColor CASCADE;
+CREATE TABLE UserSkinColor (
+	user INT REFERENCES User(id),
+    skin INT REFERENCES Skin(id),
+    color INT REFERENCES Color(id)
+);
